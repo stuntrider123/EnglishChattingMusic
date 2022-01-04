@@ -85,7 +85,7 @@ async def play(_, message: Message):
         user_name = message.from_user.first_name
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")" 
         await app.send_message(message.chat.id,
-            text=f"**Hallo** {rpk}**!**\n\n**This is music bot owned by** @JustDzL\n**Bot is allowed to play music in your voice group call.**\n\n**Cara make bot nya tinggal klik ae tombol di bawah.**\n**Note!**\n**jan lupa mandi kak, u bau.**",
+            text=f"**Hallo** {rpk}**!**\n\n**This is music bot owned by** @JustDzL\n**Bot is allowed to play music in your voice group call.**\n\n**Cara make bot nya tinggal klik tombol di bawah.**\n\n**Note!**\n**jangan lupa mandi kak, u bau.**",
             parse_mode="markdown",
             reply_markup=pstart_markup,
             reply_to_message_id=message.message_id
