@@ -1,5 +1,5 @@
 {
-    "name": "Mentos Music",
+    "name": "dzmusic",
     "logo": "https://te.legra.ph/file/24add7d3f42fdf0a909c7.jpg",
     "description": "Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": [
@@ -7,7 +7,7 @@
         "voice chat", 
         "telegram"
     ],
-    "repository": "https://github.com/itsdzl/MentosMusic",
+    "repository": "https://github.com/itsdzl/dzmusic",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
