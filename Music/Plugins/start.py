@@ -63,7 +63,7 @@ async def welcome(_, message: Message):
                 await remove_active_chat(chat_id)
             if member.id == BOT_ID:
                 out = start_pannel()
-                await message.reply_text(f"Welcome To MentosMusic Music\n\nPromote me as administrator in your group otherwise I will not function properly.", reply_markup=InlineKeyboardMarkup(out[1]))
+                await message.reply_text(f"Welcome To dzMusic Music\n\nPromote me as administrator in your group otherwise I will not function properly.", reply_markup=InlineKeyboardMarkup(out[1]))
                 return
         except:
             return
@@ -103,20 +103,20 @@ async def play(_, message: Message):
                 x = ytdl.extract_info(query, download=False)
             thumbnail = (x["thumbnail"])
             searched_text = f"""
-🔍__**Video Track Information**__
+〃__**Video Track Information**__
 
-❇️**Title:** {x["title"]}
+〃**Title:** {x["title"]}
    
-⏳**Duration:** {round(x["duration"] / 60)} Mins
-👀**Views:** `{x["view_count"]}`
-👍**Likes:** `{x["like_count"]}`
-👎**Dislikes:** `{x["dislike_count"]}`
-⭐️**Average Ratings:** {x["average_rating"]}
-🎥**Channel Name:** {x["uploader"]}
-📎**Channel Link:** [Visit From Here]({x["channel_url"]})
-🔗**Link:** [Link]({x["webpage_url"]})
+〃**Duration:** {round(x["duration"] / 60)} Mins
+〃**Views:** `{x["view_count"]}`
+〃**Likes:** `{x["like_count"]}`
+〃**Dislikes:** `{x["dislike_count"]}`
+〃**Average Ratings:** {x["average_rating"]}
+〃**Channel Name:** {x["uploader"]}
+〃**Channel Link:** [Visit From Here]({x["channel_url"]})
+〃**Link:** [Link]({x["webpage_url"]})
 
-⚡️ __Searched Powered By Mentos Music Bot__"""
+⚡️ __Searched Powered By dzMusic Bot__"""
             link = (x["webpage_url"])
             buttons = personal_markup(link)
             userid = message.from_user.id
