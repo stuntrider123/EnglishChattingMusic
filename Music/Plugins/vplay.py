@@ -21,7 +21,7 @@ opts = {"format": "best[height=?480]/best", "noplaylist": True}
 ydl = YoutubeDL(opts)
 
 
-@Client.on_message(filters.command("play"))
+@Client.on_message(filters.command("vplay"))
 @authorized_users_only
 async def play(client, m: Message):
     replied = m.reply_to_message
@@ -97,7 +97,7 @@ async def play(client, m: Message):
         await m.reply("`Reply to some Audio!`")
 
 
-@Client.on_message(filters.command("stream"))
+@Client.on_message(filters.command("vplay"))
 @authorized_users_only
 async def stream(client, m: Message):
     replied = m.reply_to_message
@@ -175,7 +175,7 @@ async def stream(client, m: Message):
         await m.reply("`Reply to some Video!`")
 
 
-@Client.on_message(filters.command("stop"))
+@Client.on_message(filters.command("vstop"))
 @authorized_users_only
 async def stopvideo(client, m: Message):
     chat_id = m.chat.id
