@@ -4,7 +4,7 @@
 
 
 
-### Not recommended for deploy, because the code is lots of my personal changed, like (linked to my telegram profile, linked to my telegram group, and linked to my telegram channel) if u still want to deploy it, its all good, but i recommend it to fork this repo, change whatever u want to, then deploy it. actually this is kanged repo, not my own, thank you.
+### Not recommended for deploy, because the code is lots of my personal changed, like ([Linked to my telegram profile](https://t.me/JustDzL), [linked to my telegram group](https://t.me/distanFriends), and [linked to my telegram channel](https://t.me/beauthink)) if u still want to deploy it, its all good, but i recommend it to fork this repo, change whatever u want to, then deploy it. actually this is kanged repo, not my own, thank you.
 
 
 [![MUSICBOT LOGO](https://telegra.ph/file/11100db05aaad2a2aef9b.jpg)](https://t.me/justDzL )
