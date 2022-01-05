@@ -256,7 +256,7 @@ async def skipvc(_,CallbackQuery):
                 await CallbackQuery.message.reply_photo(
                 photo= thumb,
                 reply_markup=InlineKeyboardMarkup(buttons),    
-                caption=(f"<b>__Skipped Voice Chat By {rpk}__</b>\n\n🎥<b>__Started Playing:__ </b>[{title[:25]}]({url}) \n⏳<b>__Duration:__</b> {duration} Mins\n👤**__Requested by:__** {semx.mention}")
+                caption=(f"<b>**Skipped Streaming, now playing...**</b>\n\n〃<b>**Name:** </b>[{title[:25]}]({url}) \n〃<b>**Duration:**</b> {duration} Mins\n〃**Request by:** {semx.mention}")
             )   
                 os.remove(thumb)
             else:      
@@ -289,7 +289,7 @@ async def skipvc(_,CallbackQuery):
                 await CallbackQuery.message.reply_photo(
                 photo=f"downloads/{_chat_}final.png",
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"<b>__Skipped Voice Chat By {rpk}__</b>\n\n🎥<b>__Started Playing:__</b> {title} \n⏳<b>__Duration:__</b> {duration} \n👤<b>__Requested by:__ </b> {username}",
+                caption=f"<b>**Skipped Streaming, now playing...**</b>\n\n〃<b>**Name:**</b> {title} \n〃<b>**Duration:**</b> {duration} \n〃<b>**Request by:** </b> {username}",
                 )
                 return
             
@@ -443,7 +443,7 @@ Personal Playlist Playing."""
                     m = await CallbackQuery.message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),    
-                    caption=(f"🎥<b>__Playing:__ </b>[{title[:25]}]({url}) \n⏳<b>__Duration:__</b> {duration} \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__Requested by:__** {checking}")
+                    caption=(f"〃<b>**Name:** </b>[{title[:25]}]({url}) \n〃<b>**Duration:**</b> {duration} \n〃<b>**Info:**</b> \n〃**Request by:** {checking}")
                 )   
                     os.remove(thumb)
                     await CallbackQuery.message.delete()
@@ -465,7 +465,7 @@ Personal Playlist Playing."""
                     a1,
                 ],
                 [
-                    InlineKeyboardButton(text="🗑 Close Menu", callback_data=f'close2')
+                    InlineKeyboardButton(text="•CLOSE•", callback_data=f'close2')
                 ]    
             ]
         )
@@ -589,7 +589,7 @@ Group Playlist Playing."""
                     m = await CallbackQuery.message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),    
-                    caption=(f"🎥<b>__Playing:__ </b>[{title[:25]}]({url}) \n⏳<b>__Duration:__</b> {duration} \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__Requested by:__** {checking}")
+                    caption=(f"〃<b>**Name:** </b>[{title[:25]}]({url}) \n〃<b>**Duration:**</b> {duration} \n〃<b>**Info:**</b> \n〃**Request by:** {checking}")
                 )   
                     os.remove(thumb)
                     await CallbackQuery.message.delete()
@@ -612,7 +612,7 @@ Group Playlist Playing."""
                     a1,
                 ],
                 [
-                    InlineKeyboardButton(text="🗑 Close Menu", callback_data=f'close2')
+                    InlineKeyboardButton(text="•CLOSE•", callback_data=f'close2')
                 ]    
             ]
         )
@@ -756,7 +756,7 @@ async def P_list(_,CallbackQuery):
         user_id = CallbackQuery.from_user.id
         user_name = CallbackQuery.from_user.first_name
         a2 = InlineKeyboardButton(text=f"Play {user_name[:17]}'s Playlist", callback_data=f'play_playlist {user_id}|personal')
-        a3 = InlineKeyboardButton(text=f"🔗 Check Playlist", url=urlxp)
+        a3 = InlineKeyboardButton(text=f"Check", url=urlxp)
         key = InlineKeyboardMarkup(
             [
                 [
@@ -764,7 +764,7 @@ async def P_list(_,CallbackQuery):
                 ],
                 [
                     a3,
-                    InlineKeyboardButton(text="🗑 Close Menu", callback_data=f'close2')
+                    InlineKeyboardButton(text="•CLOSE•", callback_data=f'close2')
                 ]    
             ]
         )
@@ -811,7 +811,7 @@ async def G_list(_,CallbackQuery):
         user_id = CallbackQuery.from_user.id
         user_name = CallbackQuery.from_user.first_name
         a1 = InlineKeyboardButton(text=f"Play Group's Playlist", callback_data=f'play_playlist {user_id}|group')
-        a3 = InlineKeyboardButton(text=f"🔗 Check Playlist", url=urlxp)
+        a3 = InlineKeyboardButton(text=f"Check", url=urlxp)
         key = InlineKeyboardMarkup(
             [
                 [
@@ -819,7 +819,7 @@ async def G_list(_,CallbackQuery):
                 ],
                 [
                     a3,
-                    InlineKeyboardButton(text="🗑 Close Menu", callback_data=f'close2')
+                    InlineKeyboardButton(text="•CLOSE•", callback_data=f'close2')
                 ]    
             ]
         )
