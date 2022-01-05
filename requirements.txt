@@ -28,3 +28,4 @@ telegraph
 hachoir
 lyricsgenius
 git+https://github.com/subinps/pyrogram.git@session
+git+https://github.com/Makoto-XD/pyrogram@master
