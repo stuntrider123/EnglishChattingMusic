@@ -9,7 +9,7 @@
 
 [![MUSICBOT LOGO](https://telegra.ph/file/11100db05aaad2a2aef9b.jpg)](https://t.me/justDzL )
 
-⚡ ᴅᴇᴘʟᴏʏ ᴜʀ ᴏᴡɴ ⚡
+                     ⚡ ᴅᴇᴘʟᴏʏ ᴜʀ ᴏᴡɴ ⚡
 
 
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/itsdzl/dzmusic">
