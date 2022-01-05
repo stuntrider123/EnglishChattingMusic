@@ -150,7 +150,7 @@ Downloading....
                 await app.send_photo(chat_id,
                 photo= thumb,
                 reply_markup=InlineKeyboardMarkup(buttons),    
-                caption=(f"〃**Now playing...** \n\n〃<b>**Name:** </b>[{title[:25]}]({url}) \n〃<b>**Duration:**</b> {duration} Mins\n〃<b>**Info:**</b> \n〃**Request by:** {semx.mention}")
+                caption=(f"〃**Now playing...** \n\n〃<b>**Name:** </b>[{title[:25]}]({url}) \n〃<b>**Duration:**</b> {duration} Mins\n〃<b>**Quotes hari ini:**</b> [see channel](https://t.me/beauthink)\n〃**Request by:** {semx.mention}")
             )   
                 os.remove(thumb)
             else:      
