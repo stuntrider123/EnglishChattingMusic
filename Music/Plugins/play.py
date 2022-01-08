@@ -270,7 +270,7 @@ async def play(_, message: Message):
                 ID = (result["id"])
         except Exception as e:
             return await mystic.edit_text(f"Song Not Found.\n**Possible Reason:**{e}")
-        thumb ="cache/IMG_20211105_143948_192.jpg"
+        thumb ="cache/PicsArt_11-28-04.13.03.jpg"
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await mystic.edit( 
             f"**🎧 MUSIC STREAMING 🎧**\n\n¹ <b>{title1}</b>\n  ┗  💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n² <b>{title2}</b>\n  ┗  💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n³ <b>{title3}</b>\n  ┗  💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n⁴ <b>{title4}</b>\n  ┗  💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n⁵ <b>{title5}</b>\n  ┗  💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>",    
