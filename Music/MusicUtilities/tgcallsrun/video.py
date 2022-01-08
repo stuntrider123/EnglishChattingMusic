@@ -22,8 +22,8 @@ from Music.MusicUtilities.tgcallsrun.queues import (
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("✨ ᴅᴏɴᴀsɪ", url=f"https://t.me/Sayonara_nih"),
-            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ ✨", url=f"https://t.me/NaraXmusic"),
+            InlineKeyboardButton("ᴏᴡɴᴇʀ​", url=f"https://t.me/JustDzL"),
+            InlineKeyboardButton("ǫᴜᴏᴛᴇs​", url=f"https://t.me/beauthink"),
         ]
     ]
 )
@@ -104,7 +104,7 @@ async def stream_end_handler(_, u: Update):
         else:
             await app.send_message(
                 chat_id,
-                f"**▶️ Sekarang memutar video\n\n🏷 Nama: [{op[0]}]({op[1]})**",
+                f"**💡 Sekarang memutar video\n\n🏷 Nama: [{op[0]}]({op[1]})**",
                 disable_web_page_preview=True,
                 reply_markup=keyboard,
             )
