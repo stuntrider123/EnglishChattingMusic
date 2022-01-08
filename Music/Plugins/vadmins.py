@@ -71,9 +71,14 @@ async def skip(client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="• ʀᴇᴘᴏ", callback_data="repo"),
-                InlineKeyboardButton(text="ᴍᴇɴᴜ •", callback_data="cbmenu"),
-            ]
+                InlineKeyboardButton(text="▶️", callback_data=f'resumevc2'),
+                InlineKeyboardButton(text="⏸️", callback_data=f'pausevc2'),
+                InlineKeyboardButton(text="⏭️", callback_data=f'skipvc2'),
+                InlineKeyboardButton(text="⏹️", callback_data=f'stopvc2')
+            ],
+            [
+                InlineKeyboardButton(text="•CLOSE•", callback_data="close2")              
+            ],
         ]
     )
 
