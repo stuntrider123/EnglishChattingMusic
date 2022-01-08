@@ -71,11 +71,9 @@ async def skip(client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-            InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇ​", url="https://t.me/missyouthere"),
-            InlineKeyboardButton(text="✨ǫᴜᴏᴛᴇs​✨", url="https://t.me/beauthink}"),
-        ],
-    ]
-    return buttons
+                InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇ​", url="https://t.me/missyouthere"),
+                InlineKeyboardButton(text="✨ǫᴜᴏᴛᴇs​✨", url="https://t.me/beauthink"),
+            ]
         ]
     )
 
