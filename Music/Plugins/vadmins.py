@@ -35,7 +35,7 @@ async def cbmenu(_, query: CallbackQuery):
             show_alert=True,
         )
     await query.edit_message_text(
-        f"⚙️ **Pengaturan dari** {query.message.chat.title}\n\n⏸ : Jeda Streaming\n▶️ : Lanjutkan Streaming\n🔇 : Bisukan Assistant\n🔊 : Bunyikan Assistant\n⏹ : Hentikan Streaming",
+        f"⚙️ **Pengaturan** {query.message.chat.title}\n\n⏸ : Jeda Streaming\n▶️ : Lanjutkan Streaming\n🔇 : Bisukan Assistant\n🔊 : Bunyikan Assistant\n⏹ : Hentikan Streaming",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -77,7 +77,7 @@ async def skip(client, m: Message):
                 InlineKeyboardButton(text="⏹️", callback_data=f'stopvc2')
             ],
             [
-                InlineKeyboardButton(text="•CLOSE•", callback_data="close2")              
+                InlineKeyboardButton(text="•TUTUP•", callback_data="close2")              
             ],
         ]
     )
@@ -98,10 +98,10 @@ async def skip(client, m: Message):
         else:
             await m.reply(
                 f"""
-⏭️ **Memutar {op[2]} selanjutnya**
+💡 **Memutar {op[2]} selanjutnya**
 
 🏷 **Nama:** [{op[0]}]({op[1]})
-🎧 **Atas permintaan:** {m.from_user.mention()}
+🔗 **Atas permintaan:** {m.from_user.mention()}
 """,
                 disable_web_page_preview=True,
                 reply_markup=keyboard,
