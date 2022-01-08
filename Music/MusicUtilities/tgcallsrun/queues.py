@@ -4,6 +4,7 @@ from typing import Dict
 
 QUEUE = {}
 
+
 class Queue(_Queue):
     _queue: list = []
 
