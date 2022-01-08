@@ -64,14 +64,14 @@ async def vplay(c: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("Quotes", url=f"https://t.me/beauthink"),
-                InlineKeyboardButton("Dz!", url=f"https://t.me/justDzL"),
+                InlineKeyboardButton("QUOTES:)", url=f"https://t.me/beauthink"),
+                InlineKeyboardButton("•UPDATE•", url=f"https://t.me/missyouthere"),
             ]
         ]
     )
     if message.sender_chat:
         return await message.reply_text(
-            "Anda adalah **Admin Anonim!**\n\n» kembali ke akun pengguna dari hak admin."
+            "**admin anonim!**\n\n» kembali ke akun pengguna dengan hak admin."
         )
     try:
         aing = await c.get_me()
@@ -81,13 +81,12 @@ async def vplay(c: Client, message: Message):
     if a.status != "administrator":
         await message.reply_text(
             f"""
-💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
+💡 beri izin admin:
 
-» ❌ Hapus pesan
-» ❌ Blokir pengguna
-» ❌ Tambah pengguna
-» ❌ Kelola obrolan suara
-
+» ❌ hapus pesan
+» ❌ blokir pengguna
+» ❌ tambah pengguna
+» ❌ kelola obrolan suara
 ✨ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             disable_web_page_preview=True,
@@ -96,9 +95,9 @@ async def vplay(c: Client, message: Message):
     if not a.can_manage_voice_chats:
         await message.reply_text(
             f"""
-💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
+💡 tidak ada izin:
 
-» ❌ Kelola obrolan suara
+» ❌ kelola obrolan suara
 
 ✨ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
@@ -108,7 +107,7 @@ async def vplay(c: Client, message: Message):
     if not a.can_delete_messages:
         await message.reply_text(
             f"""
-💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
+💡 tidak ada izin:
 
 » ❌ Hapus pesan
 
@@ -120,7 +119,7 @@ async def vplay(c: Client, message: Message):
     if not a.can_invite_users:
         await message.reply_text(
             f"""
-💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
+💡 tidak ada izin:
 
 » ❌ Tambah pengguna
 
@@ -134,7 +133,7 @@ async def vplay(c: Client, message: Message):
         b = await c.get_chat_member(chat_id, ubot.id)
         if b.status == "kicked":
             await message.reply_text(
-                f"@{ubot.username} **Terkena ban di grup** {message.chat.title}\n\n» **unban Assistant terlebih dahulu jika ingin menggunakan bot ini.**"
+                f"@{ubot.username} **Terkena ban dari grup** {message.chat.title}\n\n» **unban Assistant terlebih dahulu jika ingin menggunakan bot ini.**"
             )
             return
     except UserNotParticipant:
@@ -143,7 +142,7 @@ async def vplay(c: Client, message: Message):
                 await ASS_ACC.join_chat(message.chat.username)
             except Exception as e:
                 await message.reply_text(
-                    f"❌ **@{ubot.username} Assistant gagal bergabung**\n\n**Alasan**: `{e}`"
+                    f"❌ **@{ubot.username} Assistant tidak dapat bergabung**\n\n**Alasan**: `{e}`"
                 )
                 return
         else:
@@ -156,7 +155,7 @@ async def vplay(c: Client, message: Message):
                 pass
             except Exception as e:
                 return await message.reply_text(
-                    f"❌ **@{ubot.username} Assistant gagal bergabung**\n\n**Alasan**: `{e}`"
+                    f"❌ **@{ubot.username} Assistant tidak dapat bergabung**\n\n**Alasan**: `{e}`"
                 )
 
     if replied:
@@ -194,13 +193,13 @@ async def vplay(c: Client, message: Message):
                 await app.send_message(
                     chat_id,
                     f"""
-💡 **Trek ditambahkan ke antrian**
+💡 **Ditambah ke Playlist**
 
 🏷 **Nama:** [{songname[:999]}]({link})
 ⏱️ **Durasi:** {duration} **detik**
-🎧 **Atas permintaan:** {requester}
+🔗 **Request by:** {requester}
 
-#️⃣ **Posisi antrian** {pos}
+📍 **Posisi antrian** {pos}
 """,
                     disable_web_page_preview=True,
                     reply_markup=keyboard,
@@ -227,13 +226,13 @@ async def vplay(c: Client, message: Message):
                 await app.send_message(
                     chat_id,
                     f"""
-▶️ **Streaming video dimulai**
+▶️ **Mulai streaming...**
 
 🏷 **Nama:** [{songname[:999]}]({link})
 ⏱️ **Durasi:** {duration} **detik**
-🎧 **Atas permintaan:** {requester}
+🔗 **Atas permintaan:** {requester}
 
-💬 **Diputar di:** {message.chat.title}
+💬 **Nama Grup:** {message.chat.title}
 """,
                     disable_web_page_preview=True,
                     reply_markup=keyboard,
@@ -270,13 +269,13 @@ async def vplay(c: Client, message: Message):
                         await app.send_message(
                             chat_id,
                             f"""
-💡 **Trek ditambahkan ke antrian**
+💡 **Ditambah ke playlist**
 
 🏷 **Nama:** [{songname[:999]}]({url})
 ⏱️ **Durasi:** {duration}
-🎧 **Atas permintaan:** {requester}
+🔗 **Atas permintaan:** {requester}
 
-#️⃣ **Posisi antrian** {pos}
+📍 **Posisi antrian** {pos}
 """,
                             disable_web_page_preview=True,
                             reply_markup=keyboard,
@@ -298,13 +297,13 @@ async def vplay(c: Client, message: Message):
                             await app.send_message(
                                 chat_id,
                                 f"""
-▶️ **Memutar video dimulai**
+▶️ **Sedang memutar**
 
 🏷 **Nama:** [{songname[:999]}]({url})
 ⏱️ **Durasi:** {duration}
-🎧 **Atas permintaan:** {requester}
+🔗 **Atas permintaan:** {requester}
 
-💬 **Diputar di:** {message.chat.title}
+💬 **Nama grup:** {message.chat.title}
 """,
                                 disable_web_page_preview=True,
                                 reply_markup=keyboard,
