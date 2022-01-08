@@ -9,11 +9,14 @@ from pyrogram.types import (
 def play_markup(videoid, user_id):
     buttons= [
             [
-                InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇ​", url=f"https://t.me/missyouthere"),
-                InlineKeyboardButton(text="•ᴍᴇɴᴜ​•", callback_data=f'other {videoid}|{user_id}'),
-            ],
-        ]
-    return buttons 
+            InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇ​", url="https://t.me/missyouthere"),
+            InlineKeyboardButton(text="ǫᴜᴏᴛᴇs​", url="https://t.me/beauthink"),
+        ],
+        [      
+                InlineKeyboardButton(text="•ᴍᴇɴᴜ•", callback_data=f"other {videoid}|{user_id}")
+        ],
+    ]
+    return buttons
 
 
 def others_markup(videoid, user_id):
