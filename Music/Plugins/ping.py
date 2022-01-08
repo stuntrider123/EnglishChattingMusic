@@ -22,7 +22,11 @@ Disk: {disk}%'''
 
 @app.on_message(filters.command(["ping", "get-st !dzmusic"]))
 async def ping(_, message):
-    start = time()
-    m_reply = await message.reply_text("pinging...")
-    delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+    uptime = await bot_sys_stats()
+    start = datetime.now()
+    response = await message.reply_text("ping...")
+    end = datetime.now()
+    resp = (end - start).microseconds / 1000
+    await response.edit(
+        f"**🏓Pong!**\n`⚡{resp} ms`"
+    )
