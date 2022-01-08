@@ -2,6 +2,7 @@ from asyncio import Queue as _Queue
 from asyncio import QueueEmpty as Empty
 from typing import Dict
 
+QUEUE = {}
 
 class Queue(_Queue):
     _queue: list = []
