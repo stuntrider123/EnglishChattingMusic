@@ -4,7 +4,7 @@
 
 
 
-### Not recommended for deploy, bcz lots of code linked to my personal profile hehe, kang this repo if u still want to deploy this repo, or not? its all up to you
+### Not recommended for deploy, bcz lots of code linked to my personal profile hehe, kang this repo if u still want to deploy it, or not? its all up to you
 
 
 [![MUSICBOT LOGO](https://telegra.ph/file/11100db05aaad2a2aef9b.jpg)](https://t.me/justDzL )
