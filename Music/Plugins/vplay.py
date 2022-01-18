@@ -64,7 +64,7 @@ async def vplay(c: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("Zin", url=f"https://t.me/Zackin"),
+                InlineKeyboardButton("𝐙𝐢𝐧 𝐌𝐮𝐬𝐢𝐜", url=f"https://t.me/MusicZinBot"),
             ]
         ]
     )
