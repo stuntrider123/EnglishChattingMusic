@@ -160,7 +160,7 @@ async def play(_, message: Message):
         )
         title = "Audio Stream"
         link = "tg://settings"
-        thumb = "https://telegra.ph/file/28605eacb17dc57f494eb.jpg"
+        thumb = "https://telegra.ph/file/c0161c598af12c8e916f0.png"
         videoid = "smex1"
     elif url:
         what = "URL Searched"
