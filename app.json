@@ -7,7 +7,7 @@
         "voice chat", 
         "telegram"
     ],
-    "repository": "https://github.com/itsdzl/dzmusic",
+    "repository": "https://github.com/stuntrider123/DzMusic",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
