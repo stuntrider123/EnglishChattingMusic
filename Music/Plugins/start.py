@@ -21,11 +21,7 @@ from Music.MusicUtilities.database.sudo import (get_sudoers, get_sudoers, remove
 def start_pannel():  
     buttons  = [
             [
-                InlineKeyboardButton(text="•COMMAND MENU•", url="https://telegra.ph/Command-dzMusic-01-03")
-            ],
-            [ 
-                InlineKeyboardButton(text="QUOTES CHANNEL", url="https://t.me/beauthink"),
-                InlineKeyboardButton(text="•DzL•", url="https://t.me/justDzL")
+                InlineKeyboardButton(text="•Zin•", url="https://t.me/Zackin")
             ],
     ]
     return "🎛  **This is Music Music Bot**", buttons
@@ -35,14 +31,7 @@ pstart_markup=InlineKeyboardMarkup(
                 [
                     InlineKeyboardButton("➕ Add Me To Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
                 ], 
-                [InlineKeyboardButton("•Cᴏᴍᴍᴀɴᴅꜱ•", url=f"https://telegra.ph/Command-dzMusic-01-03")],
-                [
-                    InlineKeyboardButton(
-                        "QUOTES CHANNEL", url=f"https://t.me/beauthink"), 
-                    InlineKeyboardButton(
-                        "Distant Friends", url=f"https://t.me/distanfriends")
-                ],
-                [ InlineKeyboardButton("•DzL•", url=f"https://t.me/justDzL"),]
+                [ InlineKeyboardButton("•Zin•", url=f"https://t.me/Zackin"),]
 
             ]
         )
@@ -63,7 +52,7 @@ async def welcome(_, message: Message):
                 await remove_active_chat(chat_id)
             if member.id == BOT_ID:
                 out = start_pannel()
-                await message.reply_text(f"Welcome To dzMusic Music\n\nPromote me as administrator in your group otherwise I will not function properly.", reply_markup=InlineKeyboardMarkup(out[1]))
+                await message.reply_text(f"Welcome To ZinMusic Music\n\nPromote me as administrator in your group otherwise I will not function properly.", reply_markup=InlineKeyboardMarkup(out[1]))
                 return
         except:
             return
@@ -75,7 +64,7 @@ async def start(_, message: Message):
 #        await message.reply_text(f"**__Not in allowed chats.__**\n\nMusic Private is only for allowed chats. Ask any Sudo User to allow your chat.\nCheck Sudo Users List [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
 #        return await app.leave_chat(chat_id)
     out = start_pannel()
-    await message.reply_text(f"Thanks for add Me to {message.chat.title}.\nBot is running up.\n\nClick Command Menu to see command list of this bot.", reply_markup=InlineKeyboardMarkup(out[1]))
+    await message.reply_text(f"Thanks for add Me to {message.chat.title}.", reply_markup=InlineKeyboardMarkup(out[1]))
     return
         
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
@@ -85,7 +74,7 @@ async def play(_, message: Message):
         user_name = message.from_user.first_name
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")" 
         await app.send_message(message.chat.id,
-            text=f"**Hallo** {rpk}**!**\n\n**This is music bot owned by** @JustDzL\n**Bot is allowed to play music in your voice group call.**\n\n**Cara make bot nya tinggal klik tombol di bawah.**\n\n**Note!**\n**jangan lupa mandi kak, u bau.**",
+            text=f"**Hallo** {rpk}**!**\n\n**This is music bot**\n**Bot is allowed to play music in your voice group call.**",
             parse_mode="markdown",
             reply_markup=pstart_markup,
             reply_to_message_id=message.message_id
