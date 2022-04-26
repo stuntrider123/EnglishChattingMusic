@@ -21,7 +21,7 @@ from Music.MusicUtilities.database.sudo import (get_sudoers, get_sudoers, remove
 def start_pannel():  
     buttons  = [
             [
-                InlineKeyboardButton(text="•Zin•", url="https://t.me/Zackin")
+                InlineKeyboardButton(text="•Twochainzz•", url="https://t.me/sousefull")
             ],
     ]
     return "🎛  **This is Music Music Bot**", buttons
@@ -31,7 +31,7 @@ pstart_markup=InlineKeyboardMarkup(
                 [
                     InlineKeyboardButton("➕ Add Me To Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
                 ], 
-                [ InlineKeyboardButton("•Zin•", url=f"https://t.me/Zackin"),]
+                [ InlineKeyboardButton("•Twochainzz•", url=f"https://t.me/sousefull"),]
 
             ]
         )
@@ -52,7 +52,7 @@ async def welcome(_, message: Message):
                 await remove_active_chat(chat_id)
             if member.id == BOT_ID:
                 out = start_pannel()
-                await message.reply_text(f"Welcome To ZinMusic Music\n\nPromote me as administrator in your group otherwise I will not function properly.", reply_markup=InlineKeyboardMarkup(out[1]))
+                await message.reply_text(f"Welcome To No name Music\n\nPromote me as administrator in your group otherwise I will not function properly.", reply_markup=InlineKeyboardMarkup(out[1]))
                 return
         except:
             return
