@@ -7,7 +7,7 @@
         "voice chat", 
         "telegram"
     ],
-    "repository": "https://github.com/stuntrider123/DzMusic",
+    "repository": "https://github.com/stuntrider123/EnglishChattingMusic",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
